@@ -1,1 +1,1 @@
-AGENTS.md
+C:/Users/ZhuanZ/WorkBuddy/2026-09-10-22-33-46/astro-blog/AGENTS.md

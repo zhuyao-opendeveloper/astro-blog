@@ -69,6 +69,11 @@ const posts = (await getCollection('blog')).sort(
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
+			.tags {
+				margin: 0.2em 0 0 0;
+				color: rgb(var(--accent));
+				font-size: 0.85rem;
+			}
 			@media (max-width: 720px) {
 				ul {
 					gap: 0.5em;
@@ -102,6 +107,11 @@ const posts = (await getCollection('blog')).sort(
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
+									{
+										post.data.tags?.length > 0 && (
+											<p class="tags">{post.data.tags.map((t) => '#' + t).join(' ')}</p>
+										)
+									}
 								</a>
 							</li>
 						))
